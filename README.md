@@ -1,2 +1,2 @@
 # PomodoroTimer
-PomodoroTimer using JavaFX
+PomodoroTimer using JavaFX software platform.
