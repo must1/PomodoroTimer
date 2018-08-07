@@ -16,8 +16,8 @@
                 <Font name="System Bold" size="52.0" />
             </font>
         </Label>
-        <Button fx:id="button" layoutX="126.0" layoutY="101.0" mnemonicParsing="false" onAction="#stopTimer" prefHeight="59.0" prefWidth="97.0" text="STOP" />
-        <Button fx:id="button" layoutX="21.0" layoutY="101.0" mnemonicParsing="false" onAction="#startTimer" prefHeight="59.0" prefWidth="91.0" text="START" />
+        <Button fx:id="stop" layoutX="126.0" layoutY="101.0" mnemonicParsing="false" onAction="#stopTimer" prefHeight="59.0" prefWidth="97.0" text="STOP" />
+        <Button fx:id="start" layoutX="21.0" layoutY="101.0" mnemonicParsing="false" onAction="#startTimer" prefHeight="59.0" prefWidth="91.0" text="START" />
         <Label fx:id="minutesLabel" alignment="CENTER" layoutX="84.0" layoutY="24.0" prefHeight="77.0" prefWidth="140.0" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
             <padding>
                 <Insets right="55.0" top="2.0" />
@@ -34,6 +34,6 @@
                 <Font name="System Bold" size="52.0" />
             </font>
         </Label>
-      <Button fx:id="button" layoutX="238.0" layoutY="101.0" mnemonicParsing="false" onAction="#resetTimer" prefHeight="59.0" prefWidth="91.0" text="RESET" />
+      <Button fx:id="reset" layoutX="238.0" layoutY="101.0" mnemonicParsing="false" onAction="#resetTimer" prefHeight="59.0" prefWidth="91.0" text="RESET" />
     </children>
 </Pane>

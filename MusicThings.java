@@ -6,7 +6,7 @@ import javafx.scene.media.MediaPlayer;
 
 import java.io.File;
 
-public class Music {
+public class MusicThings {
     private Media sound;
     private String musicFile;
     private MediaPlayer mediaPlayer;

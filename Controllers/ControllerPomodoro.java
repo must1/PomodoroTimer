@@ -1,9 +1,10 @@
 package PomodoroTimer.Controllers;
 
-import PomodoroTimer.Music;
+import PomodoroTimer.MusicThings;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.util.Duration;
 
@@ -14,11 +15,15 @@ public class ControllerPomodoro {
     private Label minutesLabel;
     @FXML
     private Label secondsLabel;
+    @FXML
+    private Button start;
     private Timeline timeline = new Timeline();
-    private Music music = new Music();
+    private MusicThings music = new MusicThings();
 
 
     private void showCountDown(int time) {
+        start.setDisable(true);
+
         int nextFrameTime = 0;
 
         for (int i = 0; i <= time; time--) {
@@ -36,6 +41,8 @@ public class ControllerPomodoro {
             nextFrameTime += 1000;
         }
 
+        timeline.setOnFinished(action -> start.setDisable(false));
+
         timeline.setCycleCount(1);
         timeline.play();
 
@@ -52,23 +59,25 @@ public class ControllerPomodoro {
         showCountDown(time);
     }
 
-
     @FXML
     void stopTimer() {
+        start.setDisable(false);
         music.turnOnClickSound();
         timeline.stop();
     }
 
     @FXML
     void resetTimer() {
+        start.setDisable(false);
         music.turnOnClickSound();
-        minutesLabel.setText("01");
+        timeline.stop();
+        minutesLabel.setText("25");
         secondsLabel.setText("00");
     }
 
     @FXML
     void initialize() {
-        minutesLabel.setText("01");
+        minutesLabel.setText("25");
         secondsLabel.setText("00");
     }
 }
