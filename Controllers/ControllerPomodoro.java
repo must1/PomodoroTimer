@@ -15,7 +15,7 @@ public class ControllerPomodoro {
     @FXML
     private Label secondsLabel;
     private Timeline timeline = new Timeline();
-    Music music = new Music();
+    private Music music = new Music();
 
 
     private void showCountDown(int time) {
@@ -60,11 +60,17 @@ public class ControllerPomodoro {
     }
 
     @FXML
-    void initialize() {
-        minutesLabel.setText("00");
-        secondsLabel.setText("10");
+    void resetTimer() {
+        music.turnOnClickSound();
+        minutesLabel.setText("01");
+        secondsLabel.setText("00");
     }
 
+    @FXML
+    void initialize() {
+        minutesLabel.setText("01");
+        secondsLabel.setText("00");
+    }
 }
 
 
