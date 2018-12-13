@@ -1,5 +1,5 @@
-# PomodoroTimer
-PomodoroTimer using JavaFX software platform.
+# Timer
+Timer using JavaFX software platform.
 
 It's got option like: start, stop or reset timer. 
 
